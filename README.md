@@ -24,7 +24,9 @@ Add the JSON below as custom JSON for the PHP Layer
         "license": "********************************************",
         "php_agent": {
             "php_recipe": "mod_php5_apache2::default",
-            "config_file": "/etc/php5/mods-available/newrelic.ini"
+            "execute_php5enmod": true,
+            "config_file": "/etc/php5/mods-available/newrelic.ini",
+            "config_file_to_be_deleted": "/etc/php5/apache2/conf.d/newrelic.ini"
         }
     }
 }
